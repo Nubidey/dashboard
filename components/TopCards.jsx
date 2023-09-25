@@ -1,49 +1,62 @@
 import React from 'react'
 import { AiFillDollarCircle, AiOutlineShareAlt, AiOutlineStar} from "react-icons/ai"
 import { SlLike } from "react-icons/sl"
-const TopCards = () => {
-  return (
-    <div className='flex flex-row mx-0 gap-8 my-4 '>
-        <div className='flex flex-col bg-white justify-between w-full border p-3 hover:bg-blue-950 hover:text-white shadow-lg'>
-        
-            <p className='text-lg mt-1 ml-2 flex'>Earnings
-            <AiFillDollarCircle className='col-start-5 flex flex-row text-2xl ml-28'/>
-            
-            </p>
-            
-            <p className='text-5xl justify-center mb-4 ml-6 mt-4'>$ 682</p>
-
-    
-        </div>
-
-        <div className='flex flex-col bg-white justify-between w-full border p-3 hover:bg-blue-950 hover:text-white shadow-lg'>
-        <p className='text-lg mt-1 ml-2 flex'>Shares
-        <AiOutlineShareAlt className='col-start-5 flex flex-row text-2xl ml-28'/>
+const TopCards = (item) => {
+  const {key, icon, value}= item.item
+  return (<div className='col-span-4'>
+    <div className='flex flex-row mx-0 my-4'>
+    <div className='flex flex-col bg-white justify-between border p-5 hover:bg-blue-950 hover:text-white shadow-lg gap-6'>
+        <div className='flex row gap-28'>
+        <p className='text-lg'>{key}
         </p>
-            <p className='text-5xl justify-center mb-4 ml-6 mt-4'> 2434</p>
+      {icon}
+       
+        </div>
+        <div className=''>
+            <p className='text-5xl justify-center'> {value}</p>
+            </div>
+        </div>
+
+        {/* <div className='flex flex-col bg-white justify-between border p-5 hover:bg-blue-950 hover:text-white shadow-lg'>
+        <div className='flex row gap-16'>
+        <p className='text-lg'>Shares
+        </p>
+        <AiOutlineShareAlt id=''/>
+       
+        </div>
+        <div>
+            <p className='text-5xl justify-center'> 2434</p>
+            </div>
         </div>
     
 
-        <div className='flex flex-col col-span-1 bg-white justify-between w-full border p-4  hover:bg-blue-950  hover:text-white shadow-lg'>
-
-        <p className='text-lg mt-1 ml-2 flex'>Likes</p>
-            <p className='text-5xl justify-center mb-4 ml-6 mt-4'>1245
-            < SlLike  className='col-start-5 flex flex-row text-2xl ml-28'/>
-            
-            </p>
-
-
+        <div className='flex flex-col bg-white justify-between border p-5 hover:bg-blue-950 hover:text-white shadow-lg'>
+        <div className='flex row gap-16'>
+        <p className='text-lg'>Likes
+        </p>
+        <SlLike id=''/>
+       
+        </div>
+        <div>
+            <p className='text-5xl justify-center'> 2434</p>
+            </div>
         </div>
 
 
-       <div className='flex flex-col col-span-1 bg-white justify-between w-full border p-2  hover:bg-blue-950  hover:text-white shadow-lg'>
-    
-       <p className='text-lg mt-1 ml-2 flex'>Ratings</p>
-            <p className='text-5xl justify-center mb-4 ml-6 mt-4'>8.5
-            <AiOutlineStar className='col-start-5 flex flex-row text-2xl ml-28'/>
-            </p>
+        <div className='flex flex-col bg-white justify-between border p-5 hover:bg-blue-950 hover:text-white shadow-lg gap-5'>
+        <div className='flex row gap-16'>
+        <p className='text-lg'>Ratings
+        </p>
+        <AiOutlineStar id=''/>
+       
         </div>
+        <div>
+            <p className='text-5xl justify-center'> 2434</p>
+            </div>
+        </div> */}
     </div>
+    </div>
+    
   )
 }
 

@@ -30,21 +30,28 @@ const BarChart = () => {
 
     useEffect(() => {
         setChartData({
-            labels: ['Mon', 'Tues', 'Wed', 'Thurs', 'Fri', 'Sat', 'Sun'],
+            labels: ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP'],
             datasets: [{
-                label: 'Sales',
-                data: [18127, 22201, 19490, 17938, 24182, 17842, 22475],
+                label: '2019',
+                data: [20, 10, 30, 20, 40, 20, 30, 40, 20],
                 borderColor: 'rgb(53, 162, 235)',
-                backgroundColor: 'rgb(53, 162, 245, 0.4',
+                backgroundColor: 'rgb(255, 153, 20, 1',
+        },
+        {   label: '2020',
+            data: [10, 30, 20, 30, 20, 30, 20, 30, 40],
+            borderColor: 'rgb(202, 206, 212)',
+                backgroundColor: 'rgb(21, 64, 96, 1',
         },
     ]   
     })
 }, [])
 
-  return (
-    <div className='md:col-span-2 lg:h-[50vh] h-[25vh] m-auto p-4 border rounded-lg bg-white'>
+  return (<div className=''>
+    <div className=' border bg-white shadow-lg h-64 p-4'>
     <Bar data={chartData} options={chartOptions}/>
     </div>
+    </div>
+   
   );
 };
 
